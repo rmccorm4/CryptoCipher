@@ -1,5 +1,5 @@
 ### Auther:  Ryan McCormick
-### Project: CryptoCypher
+### Project: CryptoCipher
 
 #Spellchecking library to decrypt ciphers without knowing shift
 import enchant

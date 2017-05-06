@@ -11,4 +11,4 @@ I thought that decrypting the message with a known shift would be no fun, so I d
 ```
 pip install pyenchant
 ```
-![Alt text](imgs/cryptoCipher.png?raw=true "Progress Picture")
+![Alt text](imgs/cryptocipher.png?raw=true "Progress Picture")

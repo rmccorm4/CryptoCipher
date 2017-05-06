@@ -41,6 +41,22 @@ def caesarDecrypt(ciphertext, shift=None):
 					plaintext.append(" ")
 			if(checkWords(''.join(plaintext))):
 				return ''.join(plaintext)
+	
+	else:
+		plaintext = []
+		for char in ciphertext:
+			if char in alphabet:
+				#mod 26 to loop around if value exceeds 25
+				shiftedChar = alphabet[(alphabet.index(char) - shift) % 26]
+				plaintext.append(shiftedChar)
+			elif char == " ":
+				plaintext.append(" ")
+			else:
+				print("There were unknown characters!")
+				break
+
+		return ''.join(plaintext)
+
 	return None
 
 def checkWords(text):
@@ -56,6 +72,7 @@ def main():
 	shift = int(input("Enter shift amount: "))
 	encryption = caesarEncrypt(plaintext, shift)
 	print("Encrypted Message:", encryption)
-	print("Decrypted Message:", caesarDecrypt(encryption))
+	print("Decrypted Message w/o Shift: ", caesarDecrypt(encryption))
+	print("Decrypted Message w/ Shift:", caesarDecrypt(encryption, shift))
 
 main()

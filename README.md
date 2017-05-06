@@ -11,4 +11,11 @@ I thought that decrypting the message with a known shift would be no fun, so I d
 ```
 pip install pyenchant
 ```
+Additionally, PyEnchant does not necessarily come with the English-US dictionary, so you may have to install it online. 
+
+For Arch Linux:
+
+```
+pacman -S aspell-en
+```
 ![Alt text](imgs/cryptocipher.png?raw=true "Progress Picture")
